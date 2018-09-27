@@ -1,0 +1,18 @@
+﻿AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: An AWS Serverless Specification template describing your function.
+Resources:
+  VLOGKH2S3:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: index.handler
+      Runtime: nodejs8.10
+      CodeUri: .
+      Description: ''
+      MemorySize: 3008
+      Timeout: 180
+      Role: 'arn:aws:iam::515303172277:role/LambdaExecute'
+      Environment:
+        Variables:
+          DEMOMODE: 'true'
+          apikey: 914ace6e16404ba5ac0a72f0de450095
